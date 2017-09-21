@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<meta name="theme-color" content="#37A">
+	<title>{{ site.name }} - {{ site.description }}</title>
+	<meta name="description" content="{{ site.description }}" />
+	<meta name="keywords" content="resources,designer,developer,bookmarks,internet,learn" />
+	<meta name="author" content="GuysWhoCode" />
+	<link rel="shortcut icon" href="../favicon.ico">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.1/semantic.min.css">
+	<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/style.css" />
+
+</head>
+<body>
+	<div class="ui container">
+		<header id="main-header" class="ui center aligned">
+			<img src="{{ site.baseurl }}/assets/img/sparkle-logo.png" class="ui tiny centered image" alt="">
+			<h1 class="ui header">{{ site.name }}</h1>
+			<p class="description">{{ site.description }}</p>
+		</header>
+		{{ content }}
+		<br>
+		<div class="ui vertical masthead center aligned segment">
+			<div class="ui center aligned container">
+				<div class="ui compact centered pagination menu">
+					{% if paginator.previous_page %}
+					<a class="item" href="{{ site.baseurl }}{{ paginator.previous_page_path }}">Previous</a>
+					{% endif %}
+					<a class="active item">{{ paginator.page }}</a>
+					{% if paginator.next_page %}
+					<a class="item" href="{{ site.baseurl }}{{ paginator.next_page_path }}">Next</a>
+					{% endif %}
+				</div>
+			</div>
+		</div>
+	</div>
+	<br>
+	<div class="ui modal" id="sparkle-modal">
+		<i class="close icon"></i>
+		<div class="scrolling image content">
+			<div class="ui medium rounded image">
+				<img src="">
+			</div>
+			<div class="description">
+				<div class="ui header title">Sparkle Title</div>
+				<p class="summary"></p>
+				<p class="main-content">Detailed sparkle description.</p>
+			</div>
+		</div>
+		<div class="actions">
+			<div class="tag-list"></div>
+			<a href="" class="ui primary right labeled icon button">
+				Visit
+				<i class="external icon"></i>
+			</a>
+		</div>
+	</div>
+	{% include footer.html %}
+	<script src="{{ site.baseurl }}/assets/js/jquery-3.1.0.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/semantic-ui/2.2.1/semantic.min.js"></script>
+	<script>
+		var make_tags = function(tags){
+			var tag_list = "";
+			tags.forEach(function(tag){
+				tag_list += '<a href="" class="ui left floated mini button">' + tag + '</a>';
+			});
+			return tag_list;
+		} 
+
+		$('.sparkle .sparkle-title').on('click', function(){
+			var sparkle_card = $(this).closest('.sparkle');
+			var sparkle_data = {};
+			sparkle_data.title = sparkle_card.find('.sparkle-title').html();
+			sparkle_data.summary = sparkle_card.find('.sparkle-summary').html();
+			sparkle_data.tags = sparkle_card.find('.sparkle-tags').html().split(',');
+			sparkle_data.main_content = sparkle_card.find('.sparkle-content').html();
+			sparkle_data.category = sparkle_card.find('.sparkle-category').html();
+			sparkle_data.thumbnail = sparkle_card.find('.sparkle-thumbnail').attr('src');
+			
+			var sparkle_modal = $('#sparkle-modal');
+			sparkle_modal.find('.header').html(sparkle_data.title);
+			sparkle_modal.find('.summary').html(sparkle_data.summary);
+			sparkle_modal.find('.main-content').html(sparkle_data.main_content);
+			sparkle_modal.find('img').attr('src', sparkle_data.thumbnail);
+			sparkle_modal.find('.tag-list').html(make_tags(sparkle_data.tags));
+			if(sparkle_data.thumbnail == "" || sparkle_data.thumbnail === undefined)
+				sparkle_modal.find('.rounded.image').hide();
+			else
+				sparkle_modal.find('.rounded.image').show();
+			$('#sparkle-modal').modal('show');
+		});
+	</script>
+</body>
+</html>

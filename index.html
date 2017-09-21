@@ -1,0 +1,33 @@
+---
+layout : page
+---
+
+<div class="ui four column doubling stackable masonry grid" id="sparkle-cards">
+	{% for post in paginator.posts %}
+	<div class="column">
+		<div class="ui fluid card sparkle">
+			{% if post.thumbnail %}
+			<div class="image">
+				<img src="{{ site.baseurl }}/posts/{{ post.thumbnail }}" class="sparkle-thumbnail">
+			</div>
+			{% endif %}
+			<div class="content">
+				<span class="header sparkle-title">{{ post.title }}</span>
+				<div class="meta">
+					<span class="sparkle-summary">{{ post.summary }}</span>
+				</div>
+			</div>
+			<div class="extra content">
+				<a class="sparkle-category">{{ post.category }}</a>
+				<span class="right floated">
+					<a target="_blank" href="{{ post.visit }}"><i class="external icon"></i></a>
+				</span>
+			</div>
+			<div class="sparkle-content" hidden>
+				{{ post.content | strip_html }}
+			</div>
+			<div class="sparkle-tags" hidden="">{{ post.tags | join: "," }}</div>
+		</div>
+	</div>
+	{% endfor %}
+</div>

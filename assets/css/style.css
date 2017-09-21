@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:300');
+body{
+  background-color: #eee;
+}
+
+.masonry.grid {
+  display: block;
+}
+
+@media only screen and (min-width: 420px) {
+  .masonry.grid {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+  }
+  
+  .ui.doubling.masonry.grid[class*="four column"] > .column {
+    width: 100% !important;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .masonry.grid {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    -webkit-column-gap: 0;
+    -moz-column-gap: 0;
+    column-gap: 0;
+  }
+  
+  .ui.doubling.masonry.grid[class*="four column"] > .column {
+    width: 100% !important;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .masonry.grid {
+    -webkit-column-count: 4;
+    -moz-column-count: 4;
+    column-count: 4;
+  }
+}
+
+#sparkle-cards .sparkle{
+  -webkit-box-shadow: 0 4px 8px -8px #444;
+  box-shadow: 0 4px 8px -8px #444;
+  border-radius: 0px;
+}
+
+#sparkle-cards .sparkle img{
+  border-radius: 0px;
+}
+
+.sparkle-category{
+	text-transform: capitalize;
+}
+
+#sparkle-cards .sparkle span.sparkle-title{
+  color: #444;
+}
+
+#main-header{
+  color: #555;
+  padding: 50px 0px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  -webkit-box-shadow: 0 4px 8px -8px #444;
+  box-shadow: 0 4px 8px -8px #444;
+  background-color: #fff;
+}
+
+#main-header h1,
+#main-header .description{
+  color: #555;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+#main-header h1{
+  font-size: 2.5em;
+  font-weight: 300;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 0px;
+}
+
+#main-header .description{
+  padding: 0px 15px;
+  text-align: center;
+  font-size: 1.5em;
+  text-transform: capitalize;
+}
+footer{
+  padding: 30px 0px;
+  background-color: #ddd;
+}
+
+#sparkle-modal,
+#sparkle-modal .button{
+  border-radius: 0px;
+}
