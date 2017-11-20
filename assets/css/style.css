@@ -42,6 +42,12 @@ body{
   }
 }
 
+#sparkle-cards .sparkle:hover{
+  -webkit-box-shadow: 0 10px 8px -8px #AAA;
+  box-shadow: 0 10px 8px -8px #AAA;
+  border-radius: 0px;
+}
+
 #sparkle-cards .sparkle{
   -webkit-box-shadow: 0 4px 8px -8px #444;
   box-shadow: 0 4px 8px -8px #444;
