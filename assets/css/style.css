@@ -52,6 +52,7 @@ body{
   -webkit-box-shadow: 0 4px 8px -8px #444;
   box-shadow: 0 4px 8px -8px #444;
   border-radius: 0px;
+  transition: 0.5s box-shadow ease-in-out;
 }
 
 #sparkle-cards .sparkle img{
