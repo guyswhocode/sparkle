@@ -52,7 +52,7 @@
 		</div>
 		<div class="actions">
 			<div class="tag-list"></div>
-			<a href="" class="ui primary right labeled icon button">
+			<a href="" class="ui primary right labeled icon button visit-url">
 				Visit
 				<i class="external icon"></i>
 			</a>
@@ -79,12 +79,14 @@
 			sparkle_data.main_content = sparkle_card.find('.sparkle-content').html();
 			sparkle_data.category = sparkle_card.find('.sparkle-category').html();
 			sparkle_data.thumbnail = sparkle_card.find('.sparkle-thumbnail').attr('src');
+			sparkle_data.visit_url = sparkle_card.find('.visit-url').attr('href');
 			
 			var sparkle_modal = $('#sparkle-modal');
 			sparkle_modal.find('.header').html(sparkle_data.title);
 			sparkle_modal.find('.summary').html(sparkle_data.summary);
 			sparkle_modal.find('.main-content').html(sparkle_data.main_content);
 			sparkle_modal.find('img').attr('src', sparkle_data.thumbnail);
+			sparkle_modal.find('.visit-url').attr('href', sparkle_data.visit_url);
 			sparkle_modal.find('.tag-list').html(make_tags(sparkle_data.tags));
 			if(sparkle_data.thumbnail == "" || sparkle_data.thumbnail === undefined)
 				sparkle_modal.find('.rounded.image').hide();
