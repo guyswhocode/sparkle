@@ -7,38 +7,50 @@ body{
   display: block;
 }
 
-@media only screen and (min-width: 420px) {
+@media only screen and (min-width: 480px) {
   .masonry.grid {
     -webkit-column-count: 2;
     -moz-column-count: 2;
     column-count: 2;
   }
   
-  .ui.doubling.masonry.grid[class*="four column"] > .column {
+  .ui.doubling.masonry.grid[class*="five column"] > .column {
+    width: 100% !important;
+  }
+}
+
+@media only screen and (min-width: 640px) {
+  .masonry.grid {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+  }
+  
+  .ui.doubling.masonry.grid[class*="five column"] > .column {
     width: 100% !important;
   }
 }
 
 @media only screen and (min-width: 768px) {
   .masonry.grid {
-    -webkit-column-count: 3;
-    -moz-column-count: 3;
-    column-count: 3;
+    -webkit-column-count: 4;
+    -moz-column-count: 4;
+    column-count: 4;
     -webkit-column-gap: 0;
     -moz-column-gap: 0;
     column-gap: 0;
   }
   
-  .ui.doubling.masonry.grid[class*="four column"] > .column {
+  .ui.doubling.masonry.grid[class*="five column"] > .column {
     width: 100% !important;
   }
 }
 
 @media only screen and (min-width: 992px) {
   .masonry.grid {
-    -webkit-column-count: 4;
-    -moz-column-count: 4;
-    column-count: 4;
+    -webkit-column-count: 5;
+    -moz-column-count: 5;
+    column-count: 5;
   }
 }
 
