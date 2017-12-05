@@ -49,7 +49,7 @@ baseurl: "http://guyswhocode.github.io/sparkle"
 
 permalink: pretty
 
-paginate: 20
+paginate: 30
 
 paginate_path: "/pages/:num"
 
