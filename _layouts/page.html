@@ -22,20 +22,6 @@
 			<p class="description">{{ site.description }}</p>
 		</header>
 		{{ content }}
-		<br>
-		<div class="ui vertical masthead center aligned segment">
-			<div class="ui center aligned container">
-				<div class="ui compact centered pagination menu">
-					{% if paginator.previous_page %}
-					<a class="item" href="{{ site.baseurl }}{{ paginator.previous_page_path }}"><i class=" angle left icon"></i></a>
-					{% endif %}
-					<a class="active item">{{ paginator.page }} of {{ paginator.total_pages }}</a>
-					{% if paginator.next_page %}
-					<a class="item" href="{{ site.baseurl }}{{ paginator.next_page_path }}"><i class=" angle right icon"></i></a>
-					{% endif %}
-				</div>
-			</div>
-		</div>
 	</div>
 	<br>
 	<div class="ui modal" id="sparkle-modal">
