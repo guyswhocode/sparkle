@@ -2,13 +2,19 @@
 layout : page
 ---
 
+<h1 class="ui header">Categories</h1>
 <div>
 	<div class="ui five stackable cards" id="category-list">		
-		{% for category in site.categories %}	
+		{% for category in site.categories %}
+		{% assign numb = 0 %}
+
 		<div class="card">
 			<div class="content">
-				<a class="header">{{ category }}</a>
-				<div class="description">10 Sparkles</div>
+				<a class="header" id="{{ category[0] | slugify }}">{{ category[0] }}</a>
+				{% for post in category[1] %}
+				{% assign numb = numb | plus: 1 %}
+				{% endfor %}
+				<div class="description">{{ numb }} Sparkles</div>
 			</div>
 		</div>
 		{% endfor %}
