@@ -1,0 +1,16 @@
+---
+layout : page
+---
+
+<div>
+	<div class="ui five stackable cards" id="category-list">		
+		{% for category in site.categories %}	
+		<div class="card">
+			<div class="content">
+				<a class="header">{{ category }}</a>
+				<div class="description">10 Sparkles</div>
+			</div>
+		</div>
+		{% endfor %}
+	</div>
+</div>

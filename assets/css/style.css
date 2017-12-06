@@ -54,17 +54,19 @@ body{
   }
 }
 
-#sparkle-cards .sparkle:hover{
-  -webkit-box-shadow: 0 10px 8px -8px #AAA;
-  box-shadow: 0 10px 8px -8px #AAA;
-  border-radius: 0px;
-}
-
-#sparkle-cards .sparkle{
+#sparkle-cards .sparkle,
+#category-list .card{
   -webkit-box-shadow: 0 4px 8px -8px #444;
   box-shadow: 0 4px 8px -8px #444;
   border-radius: 0px;
   transition: 0.5s box-shadow ease-in-out;
+}
+
+#sparkle-cards .sparkle:hover,
+#category-list .card:hover{
+  -webkit-box-shadow: 0 10px 8px -8px #AAA;
+  box-shadow: 0 10px 8px -8px #AAA;
+  border-radius: 0px;
 }
 
 #sparkle-cards .sparkle img{
@@ -148,4 +150,8 @@ footer{
   transform: rotate(3deg);
   right: 10px;
   left: auto;
+}
+
+#category-list .card .header{
+  text-transform: capitalize;
 }
