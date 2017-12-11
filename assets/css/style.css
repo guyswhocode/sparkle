@@ -152,6 +152,11 @@ footer{
   left: auto;
 }
 
+#category-list .card,
+#category-list .card .image img{
+  border-radius: 0px;
+}
+
 #category-list .card .header{
   text-transform: capitalize;
 }
