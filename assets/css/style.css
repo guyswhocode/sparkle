@@ -55,6 +55,7 @@ body{
 }
 
 #sparkle-cards .sparkle,
+#tag-list .card,
 #category-list .card{
   -webkit-box-shadow: 0 4px 8px -8px #444;
   box-shadow: 0 4px 8px -8px #444;
@@ -63,6 +64,7 @@ body{
 }
 
 #sparkle-cards .sparkle:hover,
+#tag-list .card:hover,
 #category-list .card:hover{
   -webkit-box-shadow: 0 10px 8px -8px #AAA;
   box-shadow: 0 10px 8px -8px #AAA;
@@ -152,6 +154,7 @@ footer{
   left: auto;
 }
 
+#tag-list .card,
 #category-list .card,
 #category-list .card .image img{
   border-radius: 0px;
