@@ -4,20 +4,18 @@ layout : page
 
 <h1 class="ui header">Categories</h1>
 <div>
-	<div class="ui five stackable cards" id="category-list">
 	{% assign sorted_categories = site.categories | sort %}		
-		{% for category in sorted_categories %}
-		{% assign numb = 0 %}
-
-		<div class="card">
-			<div class="content">
-				<a class="header" id="{{ category[0] | slugify }}">{{ category[0] }}</a>
-				{% for post in category[1] %}
-				{% assign numb = numb | plus: 1 %}
-				{% endfor %}
-				<div class="description">{{ numb }} Sparkles</div>
-			</div>
+	{% for category in sorted_categories %}
+	{% assign numb = 0 %}
+	<h3 class="ui heade" style="text-transform: capitalize;">{{ category[0] }}</h3>
+	<div class="ui ten stackable cards">
+		{% for post in category[1] %}
+		<div class="card" data-tooltip="{{ post.title }}">
+			<a class="image">
+				<img src="{% if post.thumbnail %}{{ site.baseurl }}/posts/{{ post.thumbnail }}{% else %}{{ site.baseurl }}/assets/img/{{ post.title | slice: 0 | capitalize }}.jpg{% endif %}">
+			</a>
 		</div>
 		{% endfor %}
 	</div>
+	{% endfor %}
 </div>
