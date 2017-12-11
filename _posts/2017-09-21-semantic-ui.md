@@ -5,5 +5,5 @@ summary : "Semantic empowers designers and developers by creating a shared vocab
 thumbnail : "semantic-ui.jpg"
 visit : https://semantic-ui.com
 tags : ["design","ui","framework","frontend","javascript","css","html","flat","opensource"]
-category : "framework"
+category : "library"
 ---

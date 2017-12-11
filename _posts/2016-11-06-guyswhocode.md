@@ -5,7 +5,7 @@ thumbnail : guyswhocode.jpg
 summary: " A group of tech enthusiastic students and computer science engineers who are really passionate about teaching computer technologies to people."
 visit : http://guyswhocode.com
 tags : [code, learn, practice]
-category : "organisation"
+category : "training"
 ---
 
 We are a nonprofit organization working to bridge the gap between people and computer technologies. We also aims at developing on ideas that are useful and beneficial to everyone.

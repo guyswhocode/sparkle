@@ -5,5 +5,5 @@ summary : "Build responsive, mobile-first projects on the web with the world's m
 thumbnail : "bootstrap.jpg"
 visit : http://getbootstrap.com
 tags : ["design","css","javascript","frontend"]
-category : "framework"
+category : "library"
 ---
