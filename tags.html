@@ -4,8 +4,9 @@ layout : page
 
 <h1 class="ui header">Tags</h1>
 <div>
-	<div class="ui five stackable cards" id="category-list">		
-		{% for tag in site.tags %}
+	<div class="ui five stackable cards" id="tag-list">	
+		{% assign sorted_tags = site.tags | sort %}			
+		{% for tag in sorted_tags %}
 		{% assign numb = 0 %}
 
 		<div class="card">
