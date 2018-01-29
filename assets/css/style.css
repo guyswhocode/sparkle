@@ -53,7 +53,7 @@ body{
     column-count: 5;
   }
 }
-
+.ui.menu,
 #sparkle-cards .sparkle,
 #tag-list .card,
 #category-list .card{
@@ -62,7 +62,7 @@ body{
   border-radius: 0px;
   transition: 0.5s box-shadow ease-in-out;
 }
-
+.ui.menu:hover,
 #sparkle-cards .sparkle:hover,
 #tag-list .card:hover,
 #category-list .card:hover{
@@ -71,9 +71,12 @@ body{
   border-radius: 0px;
 }
 
+.ui.menu,
+.ui.menu > .item,
 #sparkle-cards .sparkle img{
   border-radius: 0px;
 }
+
 
 .sparkle-category{
 	text-transform: capitalize;
