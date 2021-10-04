@@ -1,3 +1,3 @@
 #!/bin/bash
-rm ./site/ -rf
+rm ./_site/ -rf
 jekyll serve --baseurl "" --watch
