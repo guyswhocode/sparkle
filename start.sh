@@ -1,5 +1,6 @@
 #!/bin/bash
-echo "Removing static files..."
-rm ./site/ -rf
+echo "Removing cache files..."
+rm ./site/ -rfv
+rm ./.jekyll-cache/ -rfv
 echo "Starting jekyll..."
-jekyll serve --baseurl "" --watch
+jekyll serve --baseurl "" --watch --trace
