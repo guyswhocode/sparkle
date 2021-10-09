@@ -1,3 +1,6 @@
 #!/bin/bash
-rm ./_site/ -rf
-jekyll serve --baseurl "" --watch
+echo "Removing cache files..."
+rm ./site/ -rfv
+rm ./.jekyll-cache/ -rfv
+echo "Starting jekyll..."
+jekyll serve --baseurl "" --watch --trace
